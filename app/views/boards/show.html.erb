@@ -1,5 +1,18 @@
 <div class="page-header">
-  <h3>Board #<%= @board.id %></h3>
+  <h1>Board: <%= @board.title %>
+  <small>
+    <%= @board.description %>
+      <a href="/boards" class="btn btn-default">
+        Back
+      </a>
+      <a href="/boards/<%= @board.id %>/edit" class="btn btn-default">
+        Edit
+      </a>
+      <a href="/delete_board/<%= @board.id %>" class="btn btn-default" rel="nofollow">
+        Delete
+      </a>
+      </small>
+    </h1>
 </div>
 
 <div class="row">
